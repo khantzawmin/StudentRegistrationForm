@@ -152,12 +152,12 @@
         <form class="registration-form" th:action="@{/saveStudent}" th:object="${student}" method="post">
             <div class="form-group">
                 <label for="name">Student Name:</label>
-                <input type="text" id="name" th:field="*{name}"/>
+                <input type="text" id="name" th:field="*{name}" required />
             </div>
 
             <div class="form-group">
                 <label for="age">Age:</label>
-                <input type="number" id="age" th:field="*{age}" min="1" />
+                <input type="number" id="age" th:field="*{age}" min="1" required />
             </div>
 
             <div class="form-group">
@@ -173,11 +173,11 @@
                 <label>Gender:</label>
                 <div class="radio-group">
                     <div>
-                        <input type="radio" id="male" th:field="*{gender}" value="Male">
+                        <input type="radio" id="male" th:field="*{gender}" value="Male" required />
                         <label for="male">Male</label>
                     </div>
                     <div>
-                        <input type="radio" id="female" th:field="*{gender}" value="Female">
+                        <input type="radio" id="female" th:field="*{gender}" value="Female" required />
                         <label for="female">Female</label>
                     </div>
                 </div>
@@ -190,7 +190,7 @@
 
             <div class="form-group">
                 <label for="address">Address:</label>
-                <textarea id="address" th:field="*{address}" placeholder="Enter Address"></textarea>
+                <textarea id="address" th:field="*{address}" placeholder="Enter Address" required ></textarea>
             </div>
 
             <input type="hidden" id="id" th:field="*{id}">

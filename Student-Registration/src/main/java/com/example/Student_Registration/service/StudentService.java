@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service //
 public class StudentService {
-    @Autowired
+    @Autowired //
     StudentRepository studentRepository;
 
     public List<Student> getAllStudents() {
